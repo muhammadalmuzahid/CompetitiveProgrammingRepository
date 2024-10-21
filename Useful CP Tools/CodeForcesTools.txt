@@ -3,3 +3,6 @@ Link: https://cf-ladder.vercel.app/
 
 2. Codeforces Visualizer: CF Visualizer offers detailed insights into Codeforces submissions, including performance trends, contest rankings, and heatmaps for problem-solving and comparison between two users.
 Link: https://cfviz.netlify.app/
+
+3. CodeShare.IO: An online code editor for interviews, troubleshooting, teaching & more…It is better than ubuntu pastebin and ideone.
+Link: https://codeshare.io/
