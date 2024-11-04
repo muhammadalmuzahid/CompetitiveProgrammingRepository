@@ -1,2 +1,2 @@
-Snippet Generator: To generator VSCode Snippet
+Snippet Generator: To generate code snippet for VSCode, Sublime Text, Atom
 LINK: https://snippet-generator.app/?description=&tabtrigger=&snippet=&mode=vscode
