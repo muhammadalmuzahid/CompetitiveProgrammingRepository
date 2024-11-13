@@ -1,16 +1,11 @@
 #include <bits/stdc++.h>
-#include <ext/pb_ds/tree_policy.hpp>
-#include <ext/pb_ds/assoc_container.hpp>
 
 #define PI 3.14159265358979323846
 #define toLowerCase(s) transform(s.begin(), s.end(), s.begin(), ::tolower);
 #define toUpperCase(s) transform(s.begin(), s.end(), s.begin(), ::toupper);
 
 using namespace std;
-using namespace __gnu_pbds;
-
 typedef long long ll;
-typedef tree<ll, null_type, less_equal<ll>, rb_tree_tag, tree_order_statistics_node_update> ordered_set;
 
 int dx[] = {+1, -1, 0, 0, +1, +1, -1, -1};
 int dy[] = {0, 0, -1, +1, +1, -1, +1, -1};
