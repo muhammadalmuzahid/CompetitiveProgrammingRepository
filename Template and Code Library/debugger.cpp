@@ -225,6 +225,13 @@ void debug(const X &x, const string &name) {
     cout << name << " = " << x << '\n';
 }
 
+void Run_Time() {
+    auto start = chrono::high_resolution_clock::now();
+    auto end = chrono::high_resolution_clock::now();
+    chrono::duration<double> elapsed = end - start;
+    cout << "Code Execution Time: " << elapsed.count() << " seconds.\n";
+}
+
 int main() {
     int num = 42;
     double pi = 3.14159;
