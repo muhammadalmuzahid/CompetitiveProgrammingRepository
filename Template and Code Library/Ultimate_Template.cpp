@@ -25,19 +25,6 @@ bool check_perfect_square(ll n){ if (n < 0) return false; ll root = sqrt(n); ret
 bool check_fibonacci(int n) { return check_perfect_square(5*n*n + 4) or check_perfect_square(5*n*n - 4); }
 bool check_parity(ll n) { return __builtin_parityll(n); } // returns 1 if the number has odd parity
 
-string binary_representation_of_given_number(ll n) {
-    if (n == 0) return "0"; 
-    string binary = bitset<64>(n).to_string();
-    return binary.substr(binary.find('1'));
-}
-
-ll countLeadingZeros(ll n) { return __builtin_clzll(n); } 
-ll countTrailing_Zeros(ll n) { return __builtin_ctzll(n); } 
-ll Number_of_Set_Bits(ll n) { return __builtin_popcountll(n); }
-ll clearKthBit(ll n, ll k) { return (n & (~(1ll << k))); } 
-ll setKthBit(ll n, ll k) { return ((1ll << k) | n); } 
-ll checkKthBit(ll n, ll k) { return (n & (1ll << k)); } 
-
 void idea(){
     
 }
