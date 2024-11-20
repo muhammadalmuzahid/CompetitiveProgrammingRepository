@@ -3,13 +3,17 @@ using namespace std;
 typedef long long ll;
 
 ll Modular_Exponentiation(ll base, ll exp, ll mod) {
-    ll res = 1LL; base = base % mod;
+    ll res = 1LL; 
+    base = base % mod;
     if (base == 0) return 0;
     while (exp > 0) {
-        if (exp & 1) res = (res * base) % mod;
-        exp = exp >> 1;
-        base = (base * base) % mod;
-    } return res;
+        if (exp % 2 == 1) {
+            res = res * base % mod;
+        }
+        base = base * base % mod;
+        exp = exp / 2ll;
+    } 
+    return res;
 }
 ll Modular_Addition(ll x, ll y, ll mod) {
     x = x % mod; y = y % mod;
