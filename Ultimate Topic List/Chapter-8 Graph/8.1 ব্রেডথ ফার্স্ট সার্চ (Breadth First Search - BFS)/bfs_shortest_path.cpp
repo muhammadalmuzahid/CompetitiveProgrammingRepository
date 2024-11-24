@@ -13,10 +13,10 @@ void bfs(int src, int des) {
     bool found = false;
     
     while (!q.empty()) {
-        pair<int, int> p = q.front();
+        pair<int, int> parent = q.front();
         q.pop();
-        int node = p.first;
-        int level = p.second;
+        int node = parent.first;
+        int level = parent.second;
         
         if (node == des) {
             cout << "Shortest path length: " << level << '\n';
@@ -24,10 +24,10 @@ void bfs(int src, int des) {
             break;
         }
         
-        for (int neighbor : adj[node]) {
-            if (!visited[neighbor]) {
-                q.push({neighbor, level + 1});
-                visited[neighbor] = true;
+        for (int child : adj[node]) {
+            if (!visited[child]) {
+                q.push({child, level + 1});
+                visited[child] = true;
             }
         }
     }
