@@ -16,15 +16,15 @@ void bfs(int src) {
     parent[src] = -1;
     
     while (!q.empty()) {
-        int node = q.front();
+        int par = q.front();
         q.pop();
         
-        for (int neighbor : adj[node]) {
-            if (!visited[neighbor]) {
-                q.push(neighbor);
-                visited[neighbor] = true;
-                level[neighbor] = level[node] + 1;
-                parent[neighbor] = node;
+        for (int child : adj[par]) {
+            if (!visited[child]) {
+                q.push(child);
+                visited[child] = true;
+                level[child] = level[par] + 1;
+                parent[child] = par;
             }
         }
     }
