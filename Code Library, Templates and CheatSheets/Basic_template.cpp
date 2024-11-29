@@ -2,7 +2,7 @@
 #define debug(x) cout << #x << " = "; cout << x << '\n';
 using namespace std;
 using ll = long long;
-const int ARRAY_SIZE  = (int) 2e6+3;
+const int mx_sz  = (int) 2e6+3;
 
 void idea() {
     
