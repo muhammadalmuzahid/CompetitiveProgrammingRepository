@@ -5,21 +5,20 @@ typedef long long ll;
 const ll MOD = 1e9 + 7;
 vector<ll> fact;
 
-// Function to calculate base^exp % mod using binary exponentiation
+// Binary exponentiation to compute base^exp % mod
 ll Modular_Exponentiation(ll base, ll exp, ll mod) {
     ll res = 1LL;
-    base = base % mod;
+    base %= mod;
     if (base == 0) return 0;
-
     while (exp > 0) {
         if (exp & 1) res = (res * base) % mod;
-        exp = exp >> 1;
+        exp >>= 1;
         base = (base * base) % mod;
     }
     return res;
 }
 
-// Function to calculate nPr % MOD
+// nPr % MOD calculation
 ll nPr(ll n, ll r, ll mod) { // O(log(MOD))
     if (r > n) return -1;
     ll numerator = fact[n] % mod;
@@ -28,7 +27,7 @@ ll nPr(ll n, ll r, ll mod) { // O(log(MOD))
     return numerator;
 }
 
-// Function to calculate nCr % MOD
+// nCr % MOD calculation
 ll nCr(ll n, ll r, ll mod) { // O(log(MOD))
     if (r == 0) return 1;
     if (r > n) return -1;
@@ -38,7 +37,7 @@ ll nCr(ll n, ll r, ll mod) { // O(log(MOD))
     return numerator;
 }
 
-// Function to precompute factorials up to a given limit
+// Precompute factorials up to n % mod
 void cal_fact(ll n, ll mod) { 
     fact.resize(n + 1);
     fact[0] = 1;
