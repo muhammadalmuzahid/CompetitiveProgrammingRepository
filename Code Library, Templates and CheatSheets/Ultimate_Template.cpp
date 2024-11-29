@@ -5,7 +5,7 @@
 #define toUpperCase(s) transform(s.begin(), s.end(), s.begin(), ::toupper);
 
 using namespace std;
-typedef long long ll;
+using ll = long long;
 
 int dx[] = {+1, -1, 0, 0, +1, +1, -1, -1};
 int dy[] = {0, 0, -1, +1, +1, -1, +1, -1};

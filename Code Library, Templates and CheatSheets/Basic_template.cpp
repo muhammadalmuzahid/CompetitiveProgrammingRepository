@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 #define debug(x) cout << #x << " = "; cout << x << '\n';
 using namespace std;
-typedef long long ll;
+using ll = long long;
 const int ARRAY_SIZE  = (int) 2e6+3;
 
 void idea() {
