@@ -4,9 +4,17 @@ using namespace std;
 int check_kth_bit_on_or_off(int x, int k) {
     return (x >> k) & 1;
 }
-
+int turn_on_kth_bit(int x, int k) {
+    return (x | (1 << k));
+}
+int turn_off_kth_bit(int x, int k) {
+    return (x & (~(1 << k)));
+}
+int toggle_kth_bit(int x, int k) {
+    return (x ^ (1 << k));
+}
 void print_on_and_off_bits(int x) {
-    for (int k = 0;k <= 31;k++) {
+    for (int k = 0; k <= 31; k++) {
         if (check_kth_bit_on_or_off(x, k)) {
             cout << 1 << " ";
         }
@@ -15,18 +23,6 @@ void print_on_and_off_bits(int x) {
         }
     }
     cout << '\n';
-}
-
-int turn_on_kth_bit(int x, int k) {
-    return (x | (1 << k));
-}
-
-int turn_off_kth_bit(int x, int k) {
-    return (x & (~(1 << k)));
-}
-
-int toggle_kth_bit(int x, int k) {
-    return (x ^ (1 << k));
 }
 
 int main() {
