@@ -3,32 +3,26 @@ using namespace std;
 typedef long long ll;
 
 ll Modular_Exponentiation(ll base, ll exp, ll mod) {
-    ll res = 1LL; 
-    base = base % mod;
-    if (base == 0) return 0;
-    while (exp > 0) {
-        if (exp % 2 == 1) {
-            res = res * base % mod;
-        }
+    ll res = 1LL;
+    base %= mod;
+    while (exp) {
+        if (exp % 2) res = res * base % mod;
         base = base * base % mod;
-        exp = exp / 2ll;
-    } 
+        exp /= 2;
+    }
     return res;
 }
 ll Modular_Addition(ll x, ll y, ll mod) {
-    x = x % mod; y = y % mod;
-    return (((x + y) % mod) + mod) % mod;
+    return ((x % mod + y % mod) % mod + mod) % mod;
 }
 ll Modular_Subtraction(ll x, ll y, ll mod) {
-    x = x % mod; y = y % mod;
-    return (((x - y) % mod) + mod) % mod;
+    return ((x % mod - y % mod) % mod + mod) % mod;
 }
 ll Modular_Multiplication(ll x, ll y, ll mod) {
-    x = x % mod; y = y % mod;
-    return (((x * y) % mod) + mod) % mod;
+    return ((x % mod * y % mod) % mod + mod) % mod;
 }
 ll Modular_Inverse(ll x, ll mod) {
-    return Modular_Exponentiation(x, mod - 2LL, mod);
+    return Modular_Exponentiation(x, mod - 2, mod);
 }
 
 int main() {
