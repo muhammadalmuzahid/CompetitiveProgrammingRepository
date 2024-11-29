@@ -7,7 +7,6 @@ ll longestSubstringWithKUniqueChars(string s, ll k) {
     vector<ll> charFrequency(26, 0);
     while (end < s.size()) {
         if (charFrequency[s[end] - 'a']++ == 0) { uniqueCount++; }
-
         while (uniqueCount > k) {
             if (--charFrequency[s[start] - 'a'] == 0) { uniqueCount--; }
             start++;
