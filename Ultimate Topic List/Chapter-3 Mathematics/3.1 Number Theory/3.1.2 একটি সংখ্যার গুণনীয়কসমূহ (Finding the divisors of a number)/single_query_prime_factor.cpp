@@ -2,16 +2,13 @@
 using namespace std;
 
 // Use case: For a single query and n <= ((1LL << 63) - 1) or 1e19
-vector <unsigned long long> Factorization(unsigned long long n){
-    vector<unsigned long long>Factors;
-    for(unsigned long long ii = 2; ii * ii <= n; ii++){
-        if(n%ii == 0)
-            Factors.push_back(ii);
-        while(n%ii==0)
-            n/=ii;
+vector<unsigned long long> Factorization(unsigned long long n) {
+    vector<unsigned long long> Factors;
+    for (unsigned long long ii = 2; ii * ii <= n; ii++) {
+        if (n % ii == 0) Factors.push_back(ii);
+        while (n % ii == 0) n /= ii;
     }
-    if(n > 1)
-        Factors.push_back(n);
+    if (n > 1) Factors.push_back(n);
     return Factors;
 }
 
