@@ -1,0 +1,8 @@
+1. CodeForces Gym: ICPC Regional Contest Virtually
+2. CodeBook / CheatSheet Update: Mathematical + Geometry Formula
+
+3. CodeBlocks Setup: AutoSave (Environment) + Abbreviation (Editor)
+
+basic math, number theory (gcd, lcm, divisors), geometry, dp, graph
+
+bfs, dfs, Dijkstra, number theory (upto Euler phi), binary search, bisection, stl, partial sum, sliding window, 2-pointer
